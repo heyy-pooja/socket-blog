@@ -4,8 +4,7 @@ const mongoose = require("mongoose")
 const { app, httpServer } = require("./socket/socket")
 require("dotenv").config()
 const path = require("path")
-// const app = express()
-// console.log(__dirname)
+
 
 
 
