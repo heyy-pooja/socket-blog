@@ -11,6 +11,7 @@ const path = require("path")
 // Setp1 middleware
 app.use(express.json())
 app.use(express.static("dist"))
+app.use(express.static("uploads"))
 app.use(cors({ origin: true, credentials: true }))
 
 // step2 routes
