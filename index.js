@@ -20,8 +20,8 @@ app.use("/api/blog", require("./routes/blog.routes"))
 app.use("*", (req, res) => {
 
     // dirname always return absalute path
-    // res.sendFile(path.join(__dirname, "dist", "index.html"))
-    res.status(404).json({ message: "resource not found 404" })
+    res.sendFile(path.join(__dirname, "dist", "index.html"))
+    // res.status(404).json({ message: "resource not found 404" })
 })
 // tep 4 error handler
 app.use((err, req, res, next) => {
