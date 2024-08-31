@@ -18,7 +18,6 @@ app.use(cors({ origin: true, credentials: true }))
 app.use("/api/blog", require("./routes/blog.routes"))
 // tep 3 404 routes
 app.use("*", (req, res) => {
-
     // dirname always return absalute path
     res.sendFile(path.join(__dirname, "dist", "index.html"))
     // res.status(404).json({ message: "resource not found 404" })
@@ -26,7 +25,6 @@ app.use("*", (req, res) => {
 // tep 4 error handler
 app.use((err, req, res, next) => {
     console.log(err);
-
     res.status(500).json({ message: "SERVER ERROR", error: err.message })
 })
 // step 5 connection
